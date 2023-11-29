@@ -10,7 +10,7 @@ fig1 = px.box(data,x="Credit_Score",
              color_discrete_map={'Poor':'red',
                                  'Standard':'orange',
                                  'Good':'green'})
-fig.update_traces(quartilemethod="exclusive")
+fig1.update_traces(quartilemethod="exclusive")
 
 fig2 = px.box(data,x="Credit_Score", 
              y="Age", 
@@ -19,7 +19,7 @@ fig2 = px.box(data,x="Credit_Score",
              color_discrete_map={'Poor':'red',
                                  'Standard':'orange',
                                  'Good':'green'})
-fig.update_traces(quartilemethod="exclusive")
+fig2.update_traces(quartilemethod="exclusive")
 st.title("Credit Scores Analysis")
 st.plotly_chart(fig1)
 st.plotly_chart(fig2)
